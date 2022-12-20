@@ -70,9 +70,9 @@ def process_cal(f, w):
                 words2d = words2d[i:]
                 break
         w = words2d[0][0]['text']
-        if w == 'לכבוד':
+        if w == 'לכבוד:':
             attrs['first'] = words2d[1][0]['text']
-            attrs['last'] = words2d[1][1]['text']+"XX"
+            attrs['last'] = words2d[1][1]['text']
         else:
             attrs['first'] = w.split(':')[1]
             attrs['last'] = words2d[1][0]['text']
